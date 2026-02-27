@@ -1,5 +1,4 @@
-name: DevSync Update 23f2005206@ds.study.iitm.ac.in
-run-name: Scheduled Run for 23f2005206@ds.study.iitm.ac.in
+name: 23f2005206@ds.study.iitm.ac.in
 
 on:
   schedule:
@@ -13,15 +12,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Step for 23f2005206@ds.study.iitm.ac.in
+      - name: 23f2005206@ds.study.iitm.ac.in
         run: |
-          echo "Processing update..."
           date > last_run.txt
 
-      - name: Commit and Push changes
+      - name: Commit and Push
         run: |
           git config --local user.email "23f2005206@ds.study.iitm.ac.in"
           git config --local user.name "GitHub Action"
           git add last_run.txt
-          git commit -m "Automated daily update for 23f2005206@ds.study.iitm.ac.in"
+          git commit -m "Update for 23f2005206@ds.study.iitm.ac.in"
           git push
