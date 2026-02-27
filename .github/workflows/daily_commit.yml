@@ -1,10 +1,10 @@
-name: Daily DevSync Update
+name: DevSync Update 23f2005206@ds.study.iitm.ac.in
+run-name: Scheduled Run for 23f2005206@ds.study.iitm.ac.in
 
 on:
   schedule:
-    # This runs every day at 05:30 UTC
     - cron: '30 5 * * *'
-  workflow_dispatch: # This line allows you to trigger it manually for testing!
+  workflow_dispatch: 
 
 jobs:
   automated_commit:
@@ -15,13 +15,13 @@ jobs:
 
       - name: Step for 23f2005206@ds.study.iitm.ac.in
         run: |
-          echo "Processing update for student email..."
+          echo "Processing update..."
           date > last_run.txt
 
       - name: Commit and Push changes
         run: |
-          git config --local user.email "action@github.com"
+          git config --local user.email "23f2005206@ds.study.iitm.ac.in"
           git config --local user.name "GitHub Action"
           git add last_run.txt
-          git commit -m "Automated daily update [$(date)]"
+          git commit -m "Automated daily update for 23f2005206@ds.study.iitm.ac.in"
           git push
